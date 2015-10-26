@@ -1,0 +1,45 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content  drag-content="false"> 
+    <ion-nav-bar class="bar-stable">
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="homeContent" ></ion-nav-view>
+    <ion-tabs class="tabs-icon-only tabs-color-active-stable tabs-color-stable tabs-calm fade-in-not-out" >
+		<ion-tab icon-off="ion-ios-people" icon-on="ion-ios-people" href="#/app/friends" >
+    		<ion-nav-view name="tab-friends" nav-transition="ios" nav-direction="forward"></ion-nav-view>
+  		</ion-tab>
+        <ion-tab icon-off="ion-map" icon-on="ion-map" href="#/app/map" > 
+    		<ion-nav-view name="tab-map" nav-direction="swap" nav-transition="ios" ></ion-nav-view>
+  		</ion-tab>
+  		<ion-tab icon-off="ion-ios-keypad" icon-on="ion-ios-keypad" href="#/app/places">
+    		<ion-nav-view name="tab-places"  nav-transition="ios" nav-direction="back"></ion-nav-view>
+  		</ion-tab>
+  	</ion-tabs>
+  </ion-side-menu-content >
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Left</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item>
+        <ion-item menu-close href="#/app/search">
+          Search
+        </ion-item>
+        <ion-item menu-close href="#/app/browse">
+          Browse
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          Playlists
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
